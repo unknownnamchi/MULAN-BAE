@@ -10,7 +10,7 @@
             padding:0;
             margin: 0;
         }
-        header{
+        .desktop-header{
             height:10vh;
             width:auto;
             background-color: beige;
@@ -23,6 +23,11 @@
             align-items: center;
             gap:10px;
         }
+
+        .left h2 {
+            font-style : italic;
+            color:rgb(129, 59, 59);
+        }
         .image-div{
             height:55px;
             width:55px;
@@ -31,7 +36,12 @@
             width:100%;
             height:100%;
             object-fit: cover;
-            border-radius: 50%;;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: filter 0.8s;
+        }
+        .img:hover{
+            filter:brightness(0.8);
         }
         .middle{
             flex:2;
@@ -49,14 +59,16 @@
         ul li {
             list-style: none;
             font-size: 25px;
+            cursor: pointer;
         }
 
         .btn{
-            padding:10px;
+            padding:13px;
             border-radius:20px;
             border:none;
-            background-color: pink;
+            background-color: rgb(147, 71, 84);
             color:white;
+            cursor: pointer;
         }
         .right{
             flex:1;
@@ -67,12 +79,14 @@
         }
         .big-container{
             width:100vw;
-            height:60vh;
+           /* height:60vh; */
+           height : auto;
            /* background-color: red; */
            background-color: beige;
             display:flex;
             justify-content: center;
             align-items: center;
+            padding:20px 0px;
         }
         .container{
             width:60vw;
@@ -86,8 +100,15 @@
             font-size: 30px;
             font-weight: bold;
             margin:auto;
+            text-decoration: underline;
+            cursor: pointer;
+            color:palevioletred;
+            text-shadow: 3px 2px 5px rgb(119, 210, 226);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
-
+        .container p {
+            color :gray;
+        }
         .btn2{
             padding:30px;
             border-radius: 20px;
@@ -95,6 +116,14 @@
             background-color: pink;
             color:white;
             font-size: 23px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 1s, opacity 1s;
+            text-decoration: none;
+        }
+        .btn2:hover{
+            transform: scale(1.05);
+            opacity: 0.9;
         }
         .content{
           /*  background-color: red; */
@@ -110,9 +139,23 @@
        /* .img2{
 
         } */
+         .content a{
+            text-decoration: none;
+            color:inherit;
+         }
         .content p{
             font-size: 40px;
             font-weight: bold;
+            font-style: italic;
+            color:palevioletred;
+            text-decoration-line: underline;
+            text-decoration-style:dotted ;
+            cursor: pointer;
+            transition: opacity 0.7s;
+
+        }
+        .content p:hover{
+            opacity: 0.7;
         }
         .grid{
             width:100vw;
@@ -130,6 +173,10 @@
             width:100%;
             background-color: rgb(28, 31, 30);
             border-radius: 10px;
+            transition: transform 1s;
+            cursor: pointer;
+          text-decoration: none;
+          color:inherit;
         }
 
         .card-image-div{
@@ -155,16 +202,99 @@
             padding-left:80px;
             color:pink;
             margin:0;
+            
+        }
+
+        .mobile-header{
+            height:60vh;
+            background-color: red;
+            display:flex;
+        }
+
+        .mleft{
+            flex:1;
+        }
+        .mobile-header img{
+            height:100%;
+            width:100%;
+            object-fit: cover;
+        }
+        .mmiddle{
+            flex:1.85;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size:35px;
+            font-weight: bold;
+            text-decoration: line-through;
+            color:whitesmoke;
+            background-image: url(baee.jpg);
+        }
+        .mright{
+            flex:1;
+        }
+
+        .card:hover{
+            transform: scale(1.05);
+        }
+        /*dont put styles after media queries*/
+          .foot{
+               /* background-color: red; */
+                height: auto;
+                width:100%;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding:30px 0px;
+            }
+            .foot p {
+                text-align: center;
+                transition: transform 0.8s, opacity 0.8s;
+                font-size:16px;
+                color:rgba(128, 128, 128, 0.655);
+                cursor: pointer;
+            }
+
+            .foot p:hover{
+                transform: scale(1.06);
+                opacity:(0.8);
+            }
+            .foot a {
+                text-decoration: none;
+                color :inherit;
+            }
+
+        @media(max-width:900px)
+        {
+            .desktop-header{
+                display: none;
+            }
+
+            .image-div2{
+                height:65px;
+                width:100px;
+            }
+            .mright{
+                display: none;
+            }
+
+            a{
+                text-decoration: none;
+                color : inherit;
+            }
+
+          
         }
     </style>
 </head>
 <body>
-    <header>
+    <header class = "desktop-header">
         <div class = "left">
             <div class="image-div ">
-                <image class ="img" src = "mb1.jpg"></image>
+                <a href ="pfp.jpg" target="_blank"> <image class ="img" src = "pfp.jpg"></image></a>  
             </div>
-            <h2>MULAN BAE</h2>
+            <h2 style = "cursor: pointer;">MULAN BAE</h2>
         </div>
         <div class="middle">
             <ul>
@@ -180,390 +310,1418 @@
             <button class = "btn" style = "background-color: rgb(189, 189, 4);">Instagram</button>
         </div>
     </header>
+
+    <header class = "mobile-header">
+        <div class ="mleft">
+            <img src = "mb1.jpg">
+        </div>
+        <div class="mmiddle">MULAN BAE</div>
+        <div class="mright"><img src ="dangerous.jpg"> </div>
+    </header>
       <div class = "big-container">
             <div class = "container">
-                <h2 class ="heading">DOWNLOAD MULAN BAE's EDITORIALS..</h2>
+                <a class = "heading" href = "https://github.com/Jasonflowerboy" target="_blank"><h2 class ="heading">DOWNLOAD MULAN BAE's EDITORIALS..</h2></a>
                 <p>Mulan Bae is a fashion model and online personality known for her distinctive aesthetic and strong presence on platforms like Instagram. She gained attention for her edgy, minimalist style and confident visuals, often blending high-fashion elements with streetwear influences. Her content typically features bold poses, clean compositions, and a modern, almost artistic vibe that resonates with younger audiences. Over time, she has built a recognizable personal brand and collaborated with various fashion and lifestyle labels, establishing herself as an emerging figure in digital modeling.</p>
-                <button class ="btn2">DOWNLOAD EDIOTORIAL</button>
+               <a href = "https://www.instagram.com/mulan_bae/" target="_blank" class = "btn2">  <button class ="btn2">DOWNLOAD EDITORIAL</button></a>
+              
                 <div class ="content">
-                    <div class = "image-div image-div2"><image class ="img img2" src ="mb2.jpg"></image></div>
-                    <p>MULAN BAE</p>
+                   <a href = "mb2.jpg" target="_blank" ><div class = "image-div image-div2"><image class ="img img2" src ="mb2.jpg"></image></div></a>
+                   <a href = "https://www.instagram.com/mulan_bae/ ">
+                      <p>MULAN BAE</p>
+                   </a>
+                 
                 </div>
             </div>
         </div>
 
         <div class = "grid">
-            <div class="card">
+            <a class = "card" href = "mb3.jpg" target="_blank">
+                 <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="mb3.jpg"></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
 
-
-              <div class="card">
+            </a>
+           
+              <a class = "card" href = "mb4.jpg" target="_blank">
+                  <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="mb4.jpg"></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
 
-
-              <div class="card">
+              </a>
+            
+            <a class = "card" href = "mb5.jpg" target="_blank">
+                  <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="mb5.jpg"></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
+            </a>
+            
 
-
-              <div class="card">
+             <a class = "card" href = "mb10.jpg" target="_blank">
+                 <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="mb10.jpg"></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-              <div class="card">
+             </a>
+             
+               <a class = "card" href = "mb13.jpg" target="_blank">
+                   <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="mb13.jpg"></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-              <div class="card">
+               </a>
+           
+             <a class = "card" href = "xann.jpg" target="_blank">
+                <div class="card">
                 <div class ="card-image-div">
-                    <image class = "card-img" src="yoon young bae.jpg"></image>
+                    <image class = "card-img" src="xann.jpg"></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-              <div class="card">
+             </a>
+              
+             <a class = "card" href = "yoon young bae x cosmopolitan korea.jpg" target="_blank">
+                 <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="yoon young bae x cosmopolitan korea.jpg"></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-
-             <div class="card">
+             </a>
+             
+            <a class = "card" href = "baee.jpg" target="_blank">
+                  <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="baee.jpg"></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
+            </a>
            
-
-              <div class="card">
+           
+             <a class = "card" href = "mb8.jpg" target="_blank">
+                 <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img"  src="mb8.jpg"></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-
-              <div class="card">
+             </a>
+             
+            <a class = "card" href = "yoon young bae.jpg" target="_blank">
+                 <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="yoon young bae.jpg"></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-
-               <div class="card">
+            </a>
+             
+            <a class = "card" href = "mb20.jpg" target="_blank">
+                  <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="mb20.jpg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-
-            <div class="card">
+            </a>
+             
+             <a class = "card" href = "mb15.jpg" target="_blank">
+                  <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="mb15.jpg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-
-               <div class="card">
+             </a>
+          
+              <a class = "card" href = "nsfw/shet25.jpeg" target="_blank">
+                 <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="nsfw/shet25.jpeg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-
-            <div class="card">
+              </a>
+              
+               <a class = "card" href = "nsfw/shet8.jpeg" target="_blank">
+                 <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="nsfw/shet8.jpeg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-
-                 <div class="card">
+               </a>
+           
+             <a class = "card" href = "nsfw/shet10.jpeg" target="_blank">
+                      <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="nsfw/shet10.jpeg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-
+             </a>
+           
+               <a class = "card" href = "nsfw/shet9.jpeg" target="_blank">
                  <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="nsfw/shet9.jpeg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-
+               </a>
+                
               
-
-                 <div class="card">
+            <a class = "card" href = "nsfw/shet2.jpeg" target="_blank">
+                  <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="nsfw/shet2.jpeg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-                 <div class="card">
+            </a>
+               
+            <a class = "card" href = "nsfw/shet4.jpeg" target="_blank">
+                  <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="nsfw/shet4.jpeg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-
-                 <div class="card">
+            </a>
+               
+            <a class = "card" href = "nsfw/shet5.jpeg" target="_blank">
+                   <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="nsfw/shet5.jpeg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-
-                 <div class="card">
+            </a>
+              
+            <a class = "card" href = "nsfw/shet3.jpeg" target="_blank">
+                  <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img"  src="nsfw/shet3.jpeg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
+            </a>
+               
 
-
-                 <div class="card">
+             <a class = "card" href = "nsfw/shet7.jpeg" target="_blank">
+                    <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="nsfw/shet7.jpeg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-
-             <div class="card">
+             </a>
+             
+              <a class = "card" href = "nsfw/shet22.jpeg" target="_blank">
+                   <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="nsfw/shet22.jpeg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-
-                 <div class="card">
+              </a>
+          
+                <a class = "card" href = "nsfw/shet6.jpeg" target="_blank">
+                      <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="nsfw/shet6.jpeg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
+                </a>
+               
 
-
-                 <div class="card">
+             <a class = "card" href = "nsfw/shet11.jpeg" target="_blank">
+                  <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="nsfw/shet11.jpeg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-             <div class="card">
+             </a>
+               
+            <a class = "card" href = "nsfw/shet12.jpeg" target="_blank">
+                 <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="nsfw/shet12.jpeg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-
-             <div class="card">
+            </a>
+            
+             <a class = "card" href = "nsfw/shet13.jpeg" target="_blank">
+                <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="nsfw/shet13.jpeg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-             <div class="card">
+             </a>
+             
+            <a class = "card" href = "nsfw/shet14.jpeg" target="_blank">
+                   <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="nsfw/shet14.jpeg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-             <div class="card">
+            </a>
+          
+            <a class = "card" href = "nsfw/shet26.jpeg" target="_blank">
+                    <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="nsfw/shet26.jpeg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-             <div class="card">
+            </a>
+         
+             <a class = "card" href = "nsfw/shet23.jpeg" target="_blank">
+                 <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="nsfw/shet23.jpeg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-             <div class="card">
+             </a>
+            
+             <a class = "card" href = "nsfw/shet15.jpeg" target="_blank">
+                   <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="nsfw/shet15.jpeg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-             <div class="card">
+             </a>
+          
+            <a class = "card" href = "nsfw/shet16.jpeg" target="_blank">
+                   <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="nsfw/shet16.jpeg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-
-             <div class="card">
+            </a>
+          
+             <a class = "card" href = "nsfw/shet17.jpeg" target="_blank">
+                   <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="nsfw/shet17.jpeg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-             <div class="card">
+             </a>
+          
+            <a class = "card" href = "nsfw/shet18.jpeg" target="_blank">
+                   <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="nsfw/shet18.jpeg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-
-             <div class="card">
+            </a>
+          
+            <a class = "card" href = "nsfw/shet19.jpeg" target="_blank">
+                 <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="nsfw/shet19.jpeg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-
-             <div class="card">
+            </a>
+            
+              <a class = "card" href = "nsfw/shet20.jpeg" target="_blank">
+                  <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="nsfw/shet20.jpeg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-
-             <div class="card">
+              </a>
+           
+             <a class = "card" href = "nsfw/shet21.jpeg" target="_blank">
+                <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="nsfw/shet21.jpeg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-              <div class="card">
+             </a>
+
+                  <a class = "card" href = "nsfw/shet34.jpeg" target="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet34.jpeg"  ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+             </a>
+
+                  <a class = "card" href = "nsfw/shet35.jpeg" target="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet35.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+             </a>
+
+                  <a class = "card" href = "nsfw/shet28.jpeg" target="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet28.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+             </a>
+
+                  <a class = "card" href = "nsfw/shet30.jpeg" target="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet30.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+             </a>
+                  <a class = "card" href = "mulan.jpeg" target="_blank">
+                <div class="card" style = "overflow: hidden;">
+                <div class ="card-image-div" style = >
+                    <image class = "card-img" src="mulan.jpeg" style = "object-fit: contain; transform: scale(1.05); "></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+             </a>
+               <a class = "card" href = "nsfw/shet24.jpeg" target="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet24.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+             </a>
+               <a class = "card" href = "nsfw/shet33.jpeg" target="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet33.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+             </a>
+               <a class = "card" href = "nsfw/shet27.jpeg" target="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet27.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+             </a>
+
+                 <a class = "card" href = "nsfw/shet36.jpeg" target="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet36.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+             </a>
+
+                 <a class = "card" href = "nsfw/shet38.jpeg" target="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet38.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+             </a>
+
+                 <a class = "card" href = "nsfw/shet44.jpeg" target="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet44.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+             </a>
+
+             <a class = "card" href = "nsfw/shet46.jpeg" target="_blank">
+                <div class="card" style = "overflow: hidden;">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet46.jpeg"  ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+             </a>
+
+                 <a class = "card" href = "nsfw/shet37.jpeg" target="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet37.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+             </a>
+
+                    <a class = "card" href = "nsfw/shet42.jpeg" target="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet42.jpeg" style = "object-position: bottom;" ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+             </a>
+
+               
+
+                    <a class = "card" href = "nsfw/shet39.jpeg" target="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet39.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+             </a>
+
+                    <a class = "card" href = "nsfw/shet45.jpeg" target="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet45.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+             </a>
+
+                  
+
+    
+            <a class = "card" href = "mb17.jpg" target="_blank">
+                 <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="mb17.jpg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-              <div class="card">
+            </a>
+             
+            <a class = "card" href = "mb19.jpg" target="_blank">
+                  <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="mb19.jpg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-              <div class="card">
+            </a>
+            
+                <a class = "card" href = "mb18.jpg" target="_blank">
+                     <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="mb18.jpg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-            <div class="card">
+                </a>
+             
+            <a class = "card" href = "download (7).jpg" target="_blank">
+                 <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="download (7).jpg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-            <div class="card">
+            </a>
+           
+            <a class = "card" href = "bae2.jpg" target="_blank">
+                 <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="bae2.jpg" style ="object-fit: contain;" ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-            <div class="card">
+            </a>
+           
+             <a class = "card" href = "download (6).jpg" target="_blank">
+                <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="download (6).jpg" style = "object-fit:contain;" ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-            <div class="card">
+             </a>
+            
+              <a class = "card" href = "yoon young bae _ @mulan_bae on instagram_.jpg" target="_blank">
+                 <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="yoon young bae _ @mulan_bae on instagram_.jpg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-            <div class="card">
+              </a>
+           
+             <a class = "card" href = "download (8).jpg" target="_blank">
+                 <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="download (8).jpg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-            <div class="card">
+             </a>
+           
+             <a class = "card" href = "download (4).jpg" target="_blank">
+                   <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="download (4).jpg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-            <div class="card">
+             </a>
+         
+              <a class = "card" href = "Rhode Lip Shape 🖍 🪞 🏋_♀️  Model_ mulan_bae.jpg" target="_blank">
+                  <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="Rhode Lip Shape 🖍 🪞 🏋_♀️  Model_ mulan_bae.jpg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-            <div class="card">
+              </a>
+          
+            <a class = "card" href = "download (5).jpg" target="_blank">
+                 <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="download (5).jpg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-            <div class="card">
+            </a>
+           
+            <a class ="card" href ="🤍.jpg" target ="_blank">
+                <div class="card">
                 <div class ="card-image-div">
                     <image class = "card-img" src="🤍.jpg" style = ></image>
                     <h2>MULAN BAE</h2>
-                    <p>EDIOTORIAL 1..</p>
+                    <p>EDITORIAL 1..</p>
                 </div>
             </div>
-        </div>
+            </a>
+
+             <a class ="card" href ="new8.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="new8.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+             <a class ="card" href ="new9.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="new9.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+             <a class ="card" href ="new10.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="new10.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+             <a class ="card" href ="new11.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="new11.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+                 <a class ="card" href ="new7.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="new7.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+            <a class ="card" href ="new1.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="new1.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
 
        
+
+            <a class ="card" href ="new13.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="new13.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+            <a class ="card" href ="new4.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="new4.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+            <a class ="card" href ="new2.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="new2.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+            <a class ="card" href ="new3.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="new3.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+            <a class ="card" href ="new6.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="new6.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+            <a class ="card" href ="new12.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="new12.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+                 <a class ="card" href ="mix/feetphoto.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/feetphoto.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+                 <a class ="card" href ="mix/feet1.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/feet1.jpeg" style = "object-position: top;" ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+               <a class ="card" href ="FEEV 2021 S_S (1).jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="FEEV 2021 S_S (1).jpg" style = "object-position: left;" ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+            <a class ="card" href ="mix/mix4.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/mix4.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+                 <a class ="card" href ="mix/feet2.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/feet2.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+            <a class ="card" href ="mix/mix5.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/mix5.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+            <a class ="card" href ="mix/feetphoto2.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/feetphoto2.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+                 <a class ="card" href ="mix/feet3.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/feet3.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+            <a class ="card" href ="mix/feetphoto3.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/feetphoto3.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+            <a class ="card" href ="mix/exercise.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/exercise.jpeg" style = "object-position: bottom;"></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+            <a class ="card" href ="mix/mix6.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/mix6.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+            <a class ="card" href ="mix/feet4.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/feet4.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+            <a class ="card" href ="mix/edit1.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/edit1.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+            <a class ="card" href ="mix/edit2.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/edit2.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+            <a class ="card" href ="mix/edit3.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/edit3.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+            <a class ="card" href ="mix/edit4.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/edit4.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+             <a class ="card" href ="mix/edit6.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/edit6.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+             <a class ="card" href ="mix/edit7.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/edit7.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+             <a class ="card" href ="mix/edit8.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/edit8.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+             <a class ="card" href ="mix/edit9.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/edit9.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+             <a class ="card" href ="mix/pic1.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/pic1.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+             <a class ="card" href ="mix/pic2.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/pic2.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+             <a class ="card" href ="mix/pic3.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/pic3.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+             <a class ="card" href ="mix/mix3.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/mix3.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+             <a class ="card" href ="mix/giant.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/giant.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+              <a class ="card" href ="mix/tit.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/tit.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+              <a class ="card" href ="mix/look.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/look.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+              <a class ="card" href ="mix/giant2.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/giant2.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+            <a class ="card" href ="mix/sexy2.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/sexy2.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+
+            <a class ="card" href ="mix/sexy3.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/sexy3.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+            <a class ="card" href ="mix/sexy4.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/sexy4.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+                  <a class ="card" href ="mix/sexy1.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/sexy1.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+              <a class ="card" href ="mix/x4.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/x4.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+              <a class ="card" href ="mix/x2.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/x2.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+              <a class ="card" href ="mix/x1.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/x1.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+            <a class ="card" href ="mix/x3.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/x3.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+             <a class ="card" href ="mix/y1.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/y1.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+             <a class ="card" href ="mix/y2.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/y2.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+             <a class ="card" href ="mix/y3.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/y3.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+             <a class ="card" href ="mix/y5.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/y5.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+               <a class ="card" href ="mix/a6.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/a6.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+               <a class ="card" href ="mix/a14.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/a14.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+               <a class ="card" href ="mix/a12.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/a12.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+               <a class ="card" href ="mix/a13.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/a13.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+            <a class ="card" href ="mix/a5.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/a5.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+            <a class ="card" href ="mix/a4.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/a4.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+            <a class ="card" href ="mix/a10.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/a10.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+            <a class ="card" href ="mix/a7.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/a7.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+               <a class ="card" href ="mix/a1.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/a1.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+               <a class ="card" href ="mix/a3.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/a3.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+               <a class ="card" href ="mix/a11.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/a11.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+               <a class ="card" href ="mix/a2.jpg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/a2.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+                  <a class ="card" href ="mix/b1.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/b1.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+                  <a class ="card" href ="mix/b2.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/b2.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+                  <a class ="card" href ="mix/b3.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/b3.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+                   <a class ="card" href ="mix/b6.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/b6.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+                  <a class ="card" href ="mix/b4.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/b4.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+                <a class ="card" href ="mix/b5.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/b5.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+             <a class ="card" href ="mix/b7.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/b7.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+          <a class ="card" href ="mix/b8.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/b8.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+              <a class ="card" href ="mix/end1.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/end1.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+              <a class ="card" href ="mix/end2.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/end2.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+              <a class ="card" href ="mix/end3.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/end3.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+              <a class ="card" href ="mix/end4.jpeg" target ="_blank">
+                <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mix/end4.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDITORIAL 1..</p>
+                </div>
+            </div>
+            </a>
+
+
+
+        </div>
+
+       <footer class = "foot">
+        <a href = "https://www.youtube.com/@Jasonflowerboy" target="_blank"><p>Copyright &copy; Jasonflowerboy</p></a>
+        
+       </footer>
 
           
 </body>
