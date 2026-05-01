@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mulan Bae</title>
+    <style>
+
+        body{
+            padding:0;
+            margin: 0;
+        }
+        header{
+            height:10vh;
+            width:auto;
+            background-color: beige;
+            display : flex;
+        }
+        .left{
+            flex:1;
+            display:flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap:10px;
+        }
+        .image-div{
+            height:55px;
+            width:55px;
+        }
+        .img{
+            width:100%;
+            height:100%;
+            object-fit: cover;
+            border-radius: 50%;;
+        }
+        .middle{
+            flex:2;
+            display: flex;
+            justify-content: space-between;
+        }
+        ul{
+            display: flex;
+            gap : 30px;
+            justify-content: space-evenly;
+            align-items: center;
+          /*  background-color: antiquewhite; */
+            flex:2;
+        }
+        ul li {
+            list-style: none;
+            font-size: 25px;
+        }
+
+        .btn{
+            padding:10px;
+            border-radius:20px;
+            border:none;
+            background-color: pink;
+            color:white;
+        }
+        .right{
+            flex:1;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center; /*stretch by default */
+            gap:20px;
+        }
+        .big-container{
+            width:100vw;
+            height:60vh;
+           /* background-color: red; */
+           background-color: beige;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width:60vw;
+            height:auto;
+           /* background-color: green;*/
+            text-align: center;
+          /*  display:flex;
+            justify-content: center; */
+        }
+        .heading{
+            font-size: 30px;
+            font-weight: bold;
+            margin:auto;
+        }
+
+        .btn2{
+            padding:30px;
+            border-radius: 20px;
+            border:none;
+            background-color: pink;
+            color:white;
+            font-size: 23px;
+        }
+        .content{
+          /*  background-color: red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:30px;
+        }
+        .image-div2{
+            height:80px;
+            width: 80px;
+        }
+       /* .img2{
+
+        } */
+        .content p{
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .grid{
+            width:100vw;
+            height:auto;
+            display:grid;
+          /*  background-color: red; */
+          background-color: beige;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+            gap:30px;
+            justify-content: center;
+        }
+
+        .card{
+            height: 60vh;
+            width:100%;
+            background-color: rgb(28, 31, 30);
+            border-radius: 10px;
+        }
+
+        .card-image-div{
+            width:100%;
+            /*background-color: cadetblue;*/
+            background-color: rgb(28, 31, 30);
+            height:80%;
+              border-radius: 10px;            
+        }
+        .card-img{
+            width:100%;
+            height:100%;
+            object-fit: cover;
+          border-radius: 10px;
+        }
+        .card h2 {
+            padding:2px 10px;
+            color : rgb(237, 182, 190);
+            font-weight:bold;
+            margin:6px;
+        }
+        .card p {
+            padding-left:80px;
+            color:pink;
+            margin:0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class = "left">
+            <div class="image-div ">
+                <image class ="img" src = "mb1.jpg"></image>
+            </div>
+            <h2>MULAN BAE</h2>
+        </div>
+        <div class="middle">
+            <ul>
+                <li>Shoots</li>
+                <li>Runways</li>
+                <li>Editorials</li>
+                <li>Film</li>
+                <li>Model</li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class = "btn">Download</button>
+            <button class = "btn" style = "background-color: rgb(189, 189, 4);">Instagram</button>
+        </div>
+    </header>
+      <div class = "big-container">
+            <div class = "container">
+                <h2 class ="heading">DOWNLOAD MULAN BAE's EDITORIALS..</h2>
+                <p>Mulan Bae is a fashion model and online personality known for her distinctive aesthetic and strong presence on platforms like Instagram. She gained attention for her edgy, minimalist style and confident visuals, often blending high-fashion elements with streetwear influences. Her content typically features bold poses, clean compositions, and a modern, almost artistic vibe that resonates with younger audiences. Over time, she has built a recognizable personal brand and collaborated with various fashion and lifestyle labels, establishing herself as an emerging figure in digital modeling.</p>
+                <button class ="btn2">DOWNLOAD EDIOTORIAL</button>
+                <div class ="content">
+                    <div class = "image-div image-div2"><image class ="img img2" src ="mb2.jpg"></image></div>
+                    <p>MULAN BAE</p>
+                </div>
+            </div>
+        </div>
+
+        <div class = "grid">
+            <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mb3.jpg"></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+
+
+              <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mb4.jpg"></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+
+
+              <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mb5.jpg"></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+
+
+              <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mb10.jpg"></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+              <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mb13.jpg"></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+              <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="yoon young bae.jpg"></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+              <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="yoon young bae x cosmopolitan korea.jpg"></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+
+             <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="baee.jpg"></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+           
+
+              <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img"  src="mb8.jpg"></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+
+              <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="yoon young bae.jpg"></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+
+               <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mb20.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mb15.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+
+               <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet25.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet8.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+
+                 <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet10.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+
+                 <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet9.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+
+              
+
+                 <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet2.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+                 <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet4.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+
+                 <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet5.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+
+                 <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img"  src="nsfw/shet3.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+
+
+                 <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet7.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+
+             <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet22.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+
+                 <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet6.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+
+
+                 <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet11.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+             <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet12.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+
+             <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet13.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+             <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet14.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+             <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet26.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+             <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet23.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+             <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet15.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+             <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet16.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+
+             <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet17.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+             <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet18.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+
+             <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet19.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+
+             <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet20.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+
+             <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="nsfw/shet21.jpeg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+              <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mb17.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+              <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mb19.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+              <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="mb18.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="download (7).jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="bae2.jpg" style ="object-fit: contain;" ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="download (6).jpg" style = "object-fit:contain;" ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="yoon young bae _ @mulan_bae on instagram_.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="download (8).jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="download (4).jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="Rhode Lip Shape 🖍 🪞 🏋_♀️  Model_ mulan_bae.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="download (5).jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class ="card-image-div">
+                    <image class = "card-img" src="🤍.jpg" style = ></image>
+                    <h2>MULAN BAE</h2>
+                    <p>EDIOTORIAL 1..</p>
+                </div>
+            </div>
+        </div>
+
+       
+
+          
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chaewon Replica</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: beige;
+    color: #222;
+}
+
+/* ---------- GLOBAL CONTAINER ---------- */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ---------- NAV ---------- */
+nav {
+    padding: 20px 0;
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-left img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-middle {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-middle a {
+    text-decoration: none;
+    color: #222;
+    font-size: 18px;
+}
+
+.nav-right {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: yellow;
+}
+
+.btn-secondary {
+    background: gainsboro;
+}
+
+/* ---------- HERO SECTION ---------- */
+.hero {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero-inner {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: gray;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.big-btn {
+    margin: 30px 0;
+    padding: 18px 28px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    background: yellow;
+    cursor: pointer;
+}
+
+.hero-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.hero-bottom img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ---------- GRID SECTION ---------- */
+.cards {
+    padding: 60px 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: bisque;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+}
+
+.card h2 {
+    margin-bottom: 20px;
+}
+
+.card button {
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: none;
+    background: yellow;
+    cursor: pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="container nav-inner">
+        <div class="nav-left">
+            <img src="chaewon.jpg">
+            <h2>CHAEWON COMPANY</h2>
+        </div>
+
+        <div class="nav-middle">
+            <a href="#">Product</a>
+            <a href="#">Buy</a>
+            <a href="#">Support</a>
+            <a href="#">Company</a>
+            <a href="#">About</a>
+        </div>
+
+        <div class="nav-right">
+            <button class="btn btn-primary">Download</button>
+            <button class="btn btn-secondary">English</button>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-inner">
+        <h1>DOWNLOAD CHAEWON FOR WINDOWS.</h1>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, ad.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt qui facere at doloremque laudantium facilis voluptatem.</p>
+
+        <button class="big-btn">Download Mac or Linux Version</button>
+
+        <div class="hero-bottom">
+            <img src="chaewon.jpg">
+            <p><strong>Download Chaewon Company</strong></p>
+        </div>
+    </div>
+</section>
+
+<section class="cards">
+    <div class="container grid">
+        <div class="card">
+            <h2>ENGLISH</h2>
+            <button>Download 64-Bit</button>
+        </div>
+
+        <div class="card">
+            <h2>ENGLISH</h2>
+            <button>Download 64-Bit</button>
+        </div>
+
+        <div class="card">
+            <h2>ENGLISH</h2>
+            <button>Download 64-Bit</button>
+        </div>
+
+        <div class="card">
+            <h2>ENGLISH</h2>
+            <button>Download 64-Bit</button>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
